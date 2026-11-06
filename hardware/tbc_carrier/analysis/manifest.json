@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "project": "",
+  "current": "2026-10-29_review",
+  "runs": {
+    "2026-10-28_2128": {
+      "source_hashes": {
+        "tbc_carrier.kicad_sch": "sha256:c05ff94ed63972ea94469109d8100336f9e19353e9a7c326311ed0413c3578ef",
+        "tbc_carrier.kicad_pcb": "sha256:2d70a6241030da86b955a0c7038f28e507a162c6edb454ad37d18f08f9f5c702",
+        "schematic.json": "sha256:c4913271b73de4558d78b6da1fe88a00a07141449289b70f54c4f99c2b0648b1",
+        "pcb.json": "sha256:fcdfc3169fcfdb6a5329c90e4a048648819ffcbe030d29917cb105f936e492d7"
+      },
+      "outputs": {
+        "gerber": "gerber.json",
+        "schematic": "schematic.json",
+        "pcb": "pcb.json",
+        "cross_analysis": "cross_analysis.json",
+        "thermal": "thermal.json",
+        "emc": "emc.json",
+        "lifecycle": "lifecycle.json"
+      },
+      "scripts": {},
+      "generated": "2026-10-29T12:18:41+00:00",
+      "pinned": false
+    },
+    "2026-10-29_review": {
+      "source_hashes": {
+        "tbc_carrier.kicad_sch": "c05ff94ed63972ea94469109d8100336f9e19353e9a7c326311ed0413c3578ef",
+        "tbc_carrier.kicad_pcb": "4f032ef9a730062b4f13b6a7c9315bb516e177def364696f2108f420b2a782da",
+        "tbc_carrier.kicad_pro": "b56b637d902c7b3079acc20785bac4f7a7f72223078b462beaa287a932e88c08"
+      },
+      "outputs": {
+        "schematic": "schematic.json",
+        "pcb": "pcb.json",
+        "gerber": "gerber.json",
+        "cross_analysis": "cross_analysis.json",
+        "thermal": "thermal.json",
+        "emc": "emc.json",
+        "lifecycle": "lifecycle.json"
+      },
+      "generated": "2026-10-29T12:24:41.428086+00:00",
+      "pinned": false,
+      "notes": "Separate review snapshot. Initial schematic analyzer reused previous cache folder; prior schematic delta assessed from retained native netlist instead."
+    }
+  }
+}

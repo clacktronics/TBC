@@ -1,0 +1,41 @@
+{
+  "parts": {
+    "CBM8051NST6": {
+      "file": "CBM8051NST6.pdf",
+      "status": "ok",
+      "datasheet_url": "https://corebai.com/Data/corebai/upload/file/20240206/CBM8051-1.pdf",
+      "verification_method": "manual PDF review; no structured extraction cache"
+    },
+    "MS9280": {
+      "file": "MS9280.pdf",
+      "status": "ok",
+      "datasheet_url": "https://cdn.promelec.ru/upload/items/2024/04/26/ruimeng-ms9280.pdf",
+      "verification_method": "manual PDF review; no structured extraction cache"
+    },
+    "LP5907MFX-3.3/NOPB": {
+      "file": "LP5907MFX-3.3_NOPB.pdf",
+      "status": "ok",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/lp5907.pdf",
+      "verification_method": "manual PDF review; no structured extraction cache"
+    },
+    "SN74LVC3G17DCTR": {
+      "file": "SN74LVC3G17DCTR.pdf",
+      "status": "ok",
+      "datasheet_url": "https://www.ti.com/lit/ds/symlink/sn74lvc3g17.pdf",
+      "verification_method": "manual PDF review; no structured extraction cache"
+    },
+    "LM1881M/TR": {
+      "file": "LM1881M_TR.pdf",
+      "status": "ok",
+      "source_catalogue": "C518922",
+      "verification_method": "manual manufacturer PDF, pages 1-3, 5, 14"
+    },
+    "AV-5": {
+      "file": "AV-5.pdf",
+      "status": "ok",
+      "source_catalogue": "C18080",
+      "verification_method": "manual manufacturer drawing, page 1"
+    }
+  },
+  "notes": "Exact HGSEMI and BOOMELE documents obtained through catalogue lookup. TI LM1881 PDF retained as a secondary reference. Diode datasheet read via web. No structured extraction cache."
+}

@@ -1,0 +1,75 @@
+# Clacktronics TBC - stage 1 (sync measurement) on Tang Nano 20K
+#
+#   make vectors   synthesise test signal + model results (Python)
+#   make eval      score the edge detector against ground truth
+#   make sim       RTL vs model, bit-exact (iverilog)
+#   make sim-top   whole design incl. UART stream
+#   make bitstream yosys + nextpnr-himbaechel + gowin_pack
+#   make prog      load into SRAM with openFPGALoader (flash: make flash)
+#
+# Tools: OSS CAD Suite (https://github.com/YosysHQ/oss-cad-suite-build)
+# provides yosys, nextpnr-himbaechel, gowin_pack (apicula), iverilog and
+# openFPGALoader. YoWASP builds also work: make YOSYS=yowasp-yosys
+# NEXTPNR=yowasp-nextpnr-himbaechel-gowin
+
+PYTHON  ?= python3
+YOSYS   ?= yosys
+NEXTPNR ?= nextpnr-himbaechel
+PACK    ?= gowin_pack
+LOADER  ?= openFPGALoader
+IVERILOG ?= iverilog
+VVP     ?= vvp
+
+DEVICE  = GW2AR-LV18QN88C8/I7
+FAMILY  = GW2A-18C
+CST     = constraints/tangnano20k.cst
+TOP     = top
+
+RTL = rtl/top.v rtl/adc_if.v rtl/sync_detect.v rtl/div_frac.v \
+      rtl/event_logger.v rtl/uart_tx.v
+
+.PHONY: all vectors eval sim sim-top bitstream prog flash clean
+
+all: sim bitstream
+
+sim/vectors/cvbs.hex: py/pal.py py/sync_model.py py/eval_sync.py
+	$(PYTHON) py/eval_sync.py --lines 50 --vectors
+
+vectors: sim/vectors/cvbs.hex
+
+eval:
+	$(PYTHON) py/eval_sync.py --lines 700 --plot build/sync_eval.png
+
+sim: sim/vectors/cvbs.hex
+	mkdir -p sim/out
+	cd sim && $(IVERILOG) -g2005 -o out/tb_sync.vvp tb_sync.v ../rtl/sync_detect.v ../rtl/div_frac.v
+	cd sim && $(VVP) -n out/tb_sync.vvp
+	$(PYTHON) py/compare_sim.py
+
+sim-top: sim/vectors/cvbs.hex
+	mkdir -p sim/out
+	cd sim && $(IVERILOG) -g2005 -DSIM -o out/tb_top.vvp tb_top.v $(addprefix ../,$(RTL))
+	cd sim && $(VVP) -n out/tb_top.vvp
+	$(PYTHON) py/compare_top.py
+
+build/$(TOP).json: $(RTL)
+	mkdir -p build
+	$(YOSYS) -q -l build/yosys.log -p "read_verilog $(RTL); synth_gowin -top $(TOP) -json $@"
+
+build/$(TOP)_pnr.json: build/$(TOP).json $(CST)
+	$(NEXTPNR) -q -l build/nextpnr.log --json $< --write $@ \
+	    --device $(DEVICE) --vopt family=$(FAMILY) --vopt cst=$(CST) --freq 27
+
+build/$(TOP).fs: build/$(TOP)_pnr.json
+	$(PACK) -d $(FAMILY) -o $@ $<
+
+bitstream: build/$(TOP).fs
+
+prog: build/$(TOP).fs
+	$(LOADER) -b tangnano20k $<
+
+flash: build/$(TOP).fs
+	$(LOADER) -b tangnano20k -f $<
+
+clean:
+	rm -rf build sim/out

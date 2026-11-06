@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "TBC")(type "KiCad")(uri "${KIPRJMOD}/TBC.kicad_sym")(options "")(descr "Clacktronics TBC project parts"))
+)

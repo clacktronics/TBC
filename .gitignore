@@ -1,0 +1,15 @@
+build/
+sim/out/
+sim/vectors/
+__pycache__/
+*.pyc
+
+# KiCad
+.history/
+*.bak
+*.lck
+fp-info-cache
+*-backups/
+*.kicad_prl
+hardware/tbc_carrier/krt_placement/
+.DS_Store

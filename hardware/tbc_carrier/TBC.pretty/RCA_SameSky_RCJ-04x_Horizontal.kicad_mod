@@ -1,0 +1,180 @@
+(footprint "RCA_SameSky_RCJ-04x_Horizontal"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "RCA jack, right angle, Same Sky RCJ-041..047 (colour suffix). From the datasheet recommended PCB layout; check against the current drawing before ordering.")
+	(tags "RCA phono cinch composite video jack")
+	(property "Reference" "REF**"
+		(at 5 -6.8 0)
+		(layer "F.SilkS")
+		(uuid "4fb328c4-4123-5d04-9846-53f51ba0fbf1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RCA_SameSky_RCJ-04x"
+		(at 5 6.8 0)
+		(layer "F.Fab")
+		(uuid "0cb70bcb-884d-5c83-9561-775e8c133432")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.sameskydevices.com/product/resource/rcj-04.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2e6e5aab-49c9-5bf7-ab36-8b0a4baafa2d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "RCA (phono) jack, right angle, through hole, Same Sky RCJ-04x"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f58eb076-0734-5147-84d5-ff432012a721")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 -5)
+		(end 10 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e0a389ec-2db7-5923-bc96-b07faf0f91a8")
+	)
+	(fp_rect
+		(start -9.4 -4.15)
+		(end 0 4.15)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "ca652086-afe2-5480-856d-76e6fdf2d8e7")
+	)
+	(fp_line
+		(start 0.1 -5.11)
+		(end 10.11 -5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1596bbbc-b095-5b82-a18d-cf8ec4899fbe")
+	)
+	(fp_line
+		(start 0.1 5.11)
+		(end 10.11 5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3b57dc5e-b5a5-53b1-8547-83352046ea21")
+	)
+	(fp_line
+		(start 10.11 -5.11)
+		(end 10.11 -1.3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c5e4ef9b-3eed-5466-a77c-960864c4f1aa")
+	)
+	(fp_line
+		(start 10.11 1.3)
+		(end 10.11 5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8b1ccd49-5029-5fda-9e42-7cf538d022a6")
+	)
+	(fp_rect
+		(start -9.9 -5.5)
+		(end 10.6 5.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "987cd7c0-7d9d-5643-a81f-bcf4192b2dc1")
+	)
+	(fp_line
+		(start -1 -6)
+		(end -1 6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "2db83ddc-ae76-5b7a-9c7c-23cc6dbbcc5b")
+	)
+	(fp_text user "board edge"
+		(at -1 -7.2 0)
+		(layer "Dwgs.User")
+		(uuid "fc56c9e6-a27a-5ebd-89bb-0c127b804a35")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 8.5 0)
+		(size 3.7 2.2)
+		(drill oval 2.5 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8995da3c-6fde-5461-a89c-33dc79aea01e")
+	)
+	(pad "2" thru_hole oval
+		(at 4 0)
+		(size 2.5 3.7)
+		(drill oval 1.3 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "29b309a2-22a9-5ead-8050-6cf488b273ec")
+	)
+	(pad "" np_thru_hole oval
+		(at 0.85 -4.25)
+		(size 1.8 1.9)
+		(drill oval 1.8 1.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "cb367546-6dd3-5951-ad3d-577df203bb62")
+	)
+	(pad "" np_thru_hole oval
+		(at 0.85 4.25)
+		(size 1.8 1.9)
+		(drill oval 1.8 1.9)
+		(layers "*.Cu" "*.Mask")
+		(uuid "e1bb07b7-ed26-554b-88de-31040fb6de67")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,156 @@
+(footprint "RCA_BOOMELE_AV-5_Horizontal"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "RCA jack, right angle, BOOMELE AV-5 (LCSC C18080, yellow). From the datasheet PCB layout: pin 2 outer conductor, pin 3 centre contact. Origin at body front face.")
+	(tags "RCA phono cinch composite video jack AV-5")
+	(property "Reference" "REF**"
+		(at 5 -6.8 0)
+		(layer "F.SilkS")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c01")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RCA_BOOMELE_AV-5"
+		(at 5 6.8 0)
+		(layer "F.Fab")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c02")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/C18080.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c03")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "RCA (phono) jack, right angle, through hole, BOOMELE AV-5"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c04")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start 0 -5)
+		(end 10 5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c05")
+	)
+	(fp_rect
+		(start -9.3 -4.2)
+		(end 0 4.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c06")
+	)
+	(fp_line
+		(start 0.1 -5.11)
+		(end 10.11 -5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c07")
+	)
+	(fp_line
+		(start 0.1 5.11)
+		(end 10.11 5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c08")
+	)
+	(fp_line
+		(start 10.11 -5.11)
+		(end 10.11 5.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c09")
+	)
+	(fp_rect
+		(start -9.8 -5.5)
+		(end 10.6 5.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c0a")
+	)
+	(fp_line
+		(start -1 -6)
+		(end -1 6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c0b")
+	)
+	(fp_text user "board edge"
+		(at -1 -7.2 0)
+		(layer "Dwgs.User")
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c0c")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 8.3 0)
+		(size 3.2 2)
+		(drill oval 2.2 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c0d")
+	)
+	(pad "2" thru_hole oval
+		(at 4.4 0)
+		(size 2.5 3.5)
+		(drill oval 1.5 2.5)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "7b2e1d3f-4c6e-4f82-8b3d-2e9f5a6b7c0e")
+	)
+	(embedded_fonts no)
+)

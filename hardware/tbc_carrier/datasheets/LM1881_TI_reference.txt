@@ -1,0 +1,797 @@
+
+=== PDF PAGE 1 ===
+Product
+Folder
+Sample &
+Buy
+T echnical
+Documents
+Tools &
+Software
+Support &
+Community
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+LM1881VideoSyncSeparator
+1 Features 3 Description
+The LM1881 Video sync separator extracts timing
+1• AC Coupled Composite Input Signal
+information including composite and vertical sync,• >10-kΩ Input Resistance burst or back porch timing, and odd and even field
+• <10-mA Power Supply Drain Current information from standard negative going sync NTSC,
+PAL (1) and SECAM video signals with amplitude from• Composite Sync and Vertical Outputs
+0.5-V to 2-V p-p. The integrated circuit is also• Odd and Even Field Output capable of providing sync separation for non-• Burst Gate or Back Porch Output standard, faster horizontal rate video signals. The
+vertical output is produced on the rising edge of the• Horizontal Scan Rates to 150 kHz
+first serration in the vertical sync period. A default• Edge Triggered Vertical Output vertical output is produced after a time delay if the• Default Triggered Vertical Output for Non- rising edge mentioned above does not occur withinStandard Video Signal (Video Games-Home the externally set delay period, such as might be the
+Computers) case for a non-standard video signal.
+2 Applications Device Information(1)
+PART NUMBER PACKAGE BODY SIZE (NOM)• Video Cameras and Recorders
+SOIC (8) 4.90 mm × 3.91 mm• Broadcasting Systems LM1881
+PDIP (8) 9.81 mm × 6.35 mm• Set-Top Boxes
+(1) For all available packages, see the orderable addendum at• Home Entertainment the end of the data sheet.
+• Computing and Gaming Applications
+(1) PAL in this datasheet refers to European broadcast TV
+standard “Phase Alternating Line”, and not to Programmable
+Array Logic.
+Typical Connection Diagram
+1
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+=== PDF PAGE 2 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+Table of Contents
+7.2 Functional Block Diagram ......................................... 61 Features .................................................................. 1
+7.3 Feature Description................................................... 72 Applications ........................................................... 1
+7.4 Device Functional Modes........................................ 103 Description ............................................................. 1
+8 Application and Implementation ........................ 114 Revision History..................................................... 2
+8.1 Application Information............................................ 115 Pin Configuration and Functions ......................... 3
+8.2 Typical Applications ................................................ 116 Specifications......................................................... 3
+9 Power Supply Recommendations ...................... 136.1 Absolute Maximum Ratings ...................................... 3
+10 Device and Documentation Support ................. 146.2 ESD Ratings.............................................................. 4
+10.1 Community Resources.......................................... 146.3 Recommended Operating Conditions....................... 4
+10.2 Trademarks ........................................................... 146.4 Electrical Characteristics LM1881............................. 4
+10.3 Electrostatic Discharge Caution ............................ 146.5 Dissipation Ratings ................................................... 4
+10.4 Glossary ................................................................ 146.6 Typical Characteristics .............................................. 5
+11 Mechanical, Packaging, and Orderable7 Detailed Description .............................................. 6 Information ........................................................... 147.1 Overview ................................................................... 6
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision F (March 2013) to Revision G Page
+• Added Pin Configuration and Functions section, ESD Ratings table, Feature Description section, Device Functional
+Modes, Application and Implementation section, Power Supply Recommendations section, Layout section, Device
+and Documentation Support section, and Mechanical, Packaging, and Orderable Information section .............................. 1
+Changes from Revision E (March 2013) to Revision F Page
+• Changed layout of National Data Sheet to TI format ........................................................................................................... 13
+2 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 3 ===
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+5 Pin Configuration and Functions
+D and P Packages
+8-Pin SOIC and PDIP
+Top View
+Pin Functions
+PIN
+TYPE DESCRIPTION
+NO. NAME
+1 CSOUT Output Composite Sync Output
+2 CVIN Input Composite Video Input
+3 VSOUT Output Vertical Sync Output
+4 GND — Ground
+5 BPOUT Output Burst or Back Porch Timing Output
+6 RSET Input Charge Current External Resistor
+7 OEOUT Output Odd and Even Field Output
+8 VCC Input Supply Voltage
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1) (2)
+MIN MAX UNIT
+Supply Voltage 13.2 V
+Input Voltage 3 VP-P 6 VP-P V(VCC = 5) (VCC ≥ 8)
+Output Sink Currents; Pins, 1, 3, 5 5 mA
+Output Sink Current; Pin 7 2 mA
+PDIP Package (10 sec.) 260
+Soldering Information Vapor Phase (60 sec.) 215 °C
+SOIC Package
+Infrared (15 sec.) 220
+Storage temperature, Tstg −65 150 °C
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2) If Military/Aerospace specified devices are required, please contact the TI Sales Office/ Distributors for availability and specifications.
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 3
+Product Folder Links: LM1881
+
+=== PDF PAGE 4 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+6.2 ESD Ratings
+VALUE UNIT
+Human body model (HBM), per ANSI/ESDA/JEDEC JS-001 (1) ±2000
+V(ESD) Electrostatic discharge V
+Machine Model ±200
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN MAX UNIT
+TA Operating free-air temperature 0 70 °C
+6.4 Electrical Characteristics LM1881
+VCC = 5 V; RSET = 680 kΩ; TA = 0°C to +70°C by correlation with 100% electrical testing at TA=25°C
+PARAMETER TEST CONDITIONS MIN TYP (1) MAX UNIT
+Supply Current Outputs at VCC = 5 V 5.2 10
+mALogic 1 VCC = 12 V 5.5 12
+DC Input Voltage Pin 2 1.3 1.5 1.8 V
+Input Threshold Voltage See (2) 55 70 85 mV
+Input Discharge Current Pin 2; VIN = 2 V 6 11 16 µA
+Input Clamp Charge Current Pin 2; VIN = 1 V 0.2 0.8 mA
+RSET Pin Reference Voltage Pin 6; (3) 1.1 1.22 1.35 V
+Composite Sync. & Vertical IOUT = 40 µA; VCC = 5 V 4.0 4.5
+VOutputs Logic 1 VCC = 12 V 11
+IOUT = 1.6 mA VCC = 5 V 2.4 3.6
+VLogic 1 VCC = 12 V 10
+Burst Gate and Odd and Even IOUT = 40 µA; VCC = 5 V 4 4.5
+VOutputs Logic 1 VCC = 12 V 11
+Composite Sync. Output IOUT = −1.6 mA; Logic 0; Pin 1 0.2 0.8 V
+Vertical Sync. Output IOUT = −1.6 mA; Logic 0; Pin 3 0.2 0.8 V
+Burst Gate Output IOUT = −1.6 mA; Logic 0; Pin 5 0.2 0.8 V
+Odd and Even Output IOUT = −1.6 mA; Logic 0; Pin 7 0.2 0.8 V
+Vertical Sync Width 190 230 300 µs
+Burst Gate Width 2.7 kΩ from Pin 5 to VCC 2.5 4 4.7 µs
+Vertical Default Time See (4) 32 65 90 µs
+(1) Typicals are at TJ = 25°C and represent the most likely parametric norm.
+(2) Relative difference between the input clamp voltage and the minimum input voltage which produces a horizontal output pulse.
+(3) Careful attention should be made to prevent parasitic capacitance coupling from any output pin (Pins 1, 3, 5 and 7) to the RSET pin (Pin
+6).
+(4) Delay time between the start of vertical sync (at input) and the vertical output pulse.
+6.5 Dissipation Ratings
+MIN MAX UNIT
+Package Dissipation (1) 1100 mW
+(1) For operation in ambient temperatures above 25°C, the device must be derated based on a 150°C maximum junction temperature and a
+package thermal resistance of 110°C/W, junction to ambient.
+4 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 5 ===
+-40 -20 0 20 40 60 80 100
+TEMPERATURE (° C)
+100
+200
+300
+400
+500
+VERTICAL PULSE WIDTH (
+/c50s)
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+6.6 Typical Characteristics
+Figure 1. RSET Value Selection vs Vertical Serration Pulse Figure 2. Vertical Default Sync Delay Time vs RSET
+Separation
+Figure 4. Vertical Pulse Width vs RSETFigure 3. Burst or Black Level Gate Time vs RSET
+Figure 5. Vertical Pulse Width vs Temperature Figure 6. Supply Current vs Supply Voltage
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 5
+Product Folder Links: LM1881
+
+=== PDF PAGE 6 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+7 Detailed Description
+7.1 Overview
+The LM1881 is designed to strip the synchronization signals from composite video sources that are in, or similar
+to, the N.T.S.C. format. Input signals with positive polarity video (increasing signal voltage signifies increasing
+scene brightness) from 0.5 V (p-p) to 2 V (p-p) can be accommodated. The LM1881 operates from a single
+supply voltage between 5-V DC and 12-V DC. The only required external components besides a power supply
+decoupling capacitor at pin 8 and a set current decoupling capacitor at pin 6, are the composite input coupling
+capacitor at pin 2 and one resistor at pin 6 that sets internal current levels. The resistor on pin 6 (that is, Rset)
+allows the LM1881 to be adjusted for source signals with line scan frequencies differing from 15.734 kHz. Four
+major sync signals are available from the I/C; composite sync including both horizontal and vertical scan timing
+information; a vertical sync pulse; a burst gate or back porch clamp pulse; and an odd and even output. The odd
+and even output level identifies which video field of an interlaced video source is present at the input. The
+outputs from the LM1881 can be used to gen-lock video camera/VTR signals with graphics sources, provide
+identification of video fields for memory storage, recover suppressed or contaminated sync signals, and provide
+timing references for the extraction of coded or uncoded data on specific video scan lines.
+To better understand the LM1881 timing information and the type of signals that are used, refer to Figure 7(a-e)
+which shows a portion of the composite video signal from the end of one field through the beginning of the next
+field.
+7.2 Functional Block Diagram
+*Components Optional, See Text
+6 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 7 ===
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+7.3 Feature Description
+7.3.1 Composite Sync Output
+The composite sync output, Figure 7(b), is simply a reproduction of the signal waveform below the composite
+video black level, with the video completely removed. This is obtained by clamping the video signal sync tips to
+1.5-V DC at Pin 2 and using a comparator threshold set just above this voltage to strip the sync signal, which is
+then buffered out to Pin 1. The threshold separation from the clamped sync tip is nominally 70 mV which means
+that for the minimum input level of 0.5 V (p-p), the clipping level is close to the halfway point on the sync pulse
+amplitude (shown by the dashed line on Figure 7(a). This threshold separation is independent of the signal
+amplitude, therefore, for a 2-V (p-p) input the clipping level occurs at 11% of the sync pulse amplitude. The
+charging current for the input coupling capacitor is 0.8 mA,
+Normally the signal source for the LM1881 is assumed to be clean and relatively noise-free, but some sources
+may have excessive video peaking, causing high-frequency video and chroma components to extend below the
+black level reference. Some video discs keep the chroma burst pulse present throughout the vertical blanking
+period so that the burst actually appears on the sync tips for three line periods instead of at black level. A clean
+composite sync signal can be generated from these sources by filtering the input signal. When the source
+impedance is low, typically 75 Ω, a 620-Ω resistor in series with the source and a 510-pF capacitor to ground will
+form a lowpass filter with a corner frequency of 500 kHz. This bandwidth is more than sufficient to pass the sync
+pulse portion of the waveform; however, any subcarrier content in the signal will be attenuated by almost 18 dB,
+effectively taking it below the comparator threshold. Filtering will also help if the source is contaminated with
+thermal noise. The output waveforms will become delayed from between 40 ns to as much as 200 ns due to this
+filter. This much delay will not usually be significant but it does contribute to the sync delay produced by any
+additional signal processing. Because the original video may also undergo processing, the need for time delay
+correction will depend on the total system, not just the sync stripper.
+7.3.2 Vertical Sync Output
+A vertical sync output is derived by internally integrating the composite sync waveform (Functional Block
+Diagram). To understand the generation of the vertical sync pulse, refer to the lower left hand section Functional
+Block Diagram. Note there are two comparators in the section. One comparator has an internally generated
+voltage reference called V1 going to one of its inputs. The other comparator has an internally generated voltage
+reference called V2 going to one of its inputs. Both comparators have a common input at their noninverting input
+coming from the internal integrator. The internal integrator is used for integrating the composite sync signal. This
+signal comes from the input side of the composite sync buffer and are positive going sync pulses. The capacitor
+to the integrator is internal to the LM1881. The capacitor charge current is set by the value of the external
+resistor RSET. The output of the integrator is going to be at a low voltage during the normal horizontal lines
+because the integrator has a very short time to charge the capacitor, which is during the horizontal sync period.
+The equalization pulses will keep the output voltage of the integrator at about the same level, below the V1.
+During the vertical sync period the narrow going positive pulses shown in Figure 7 is called the serration pulse.
+The wide negative portion of the vertical sync period is called the vertical sync pulse. At the start of the vertical
+sync period, before the first Serration pulse occurs, the integrator now charges the capacitor to a much higher
+voltage. At the first serration pulse the integrator output should be between V1 and V2. This would give a high
+level at the output of the comparator with V1 as one of its inputs. This high is clocked into the “D” flip-flop by the
+falling edge of the serration pulse (remember the sync signal is inverted in this section of the LM1881). The “Q”
+output of the “D” flip-flop goes through the OR gate, and sets the R/S flip-flop. The output of the R/S flip-flop
+enables the internal oscillator and also clocks the ODD/EVEN “D” flip-flop. The ODD/EVEN field pulse operation
+is covered in Odd and Even Field Pulse. The output of the oscillator goes to a divide by 8 circuit, thus resetting
+the R/S flip-flop after 8 cycles of the oscillator. The frequency of the oscillator is established by the internal
+capacitor going to the oscillator and the external RSET. The “Q” output of the R/S flip-flop goes to pin 3 and is the
+actual vertical sync output of the LM1881. By clocking the “D” flip-flop at the start of the first serration pulse
+means that the vertical sync output pulse starts at this point in time and lasts for eight cycles of the internal
+oscillator as shown in Figure 7.
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 7
+Product Folder Links: LM1881
+
+=== PDF PAGE 8 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+Feature Description (continued)
+How RSET affects the integrator and the internal oscillator is shown under the Typical Performance
+Characteristics. The first graph is “RSET Value Selection vs Vertical Serration Pulse Separation”. For this graph to
+be valid, the vertical sync pulse should last for at least 85% of the horizontal half line (47% of a full horizontal
+line). A vertical sync pulse from any standard should meet this requirement; both NTSC and PAL do meet this
+requirement (the serration pulse is the remainder of the period, 10% to 15% of the horizontal half line).
+Remember this pulse is a positive pulse at the integrator but negative in Figure 7. This graph shows how long it
+takes the integrator to charge its internal capacitor above V1.
+With RSET too large the charging current of the integrator will be too small to charge the capacitor above V1, thus
+there will be no vertical synch output pulse. As mentioned above, RSET also sets the frequency of the internal
+oscillator. If the oscillator runs too fast its eight cycles will be shorter than the vertical sync portion of the
+composite sync. Under this condition another vertical sync pulse can be generated on one of the later serration
+pulse after the divide by 8 circuit resets the R/S flip-flop. The first graph also shows the minimum RSET necessary
+to prevent a double vertical pulse, assuming that the serration pulses last for only three full horizontal line periods
+(six serration pulses for NTSC). The actual pulse width of the vertical sync pulse is shown in the “Vertical Pulse
+Width vs RSET” graph. Using NTSC as an example, lets see how these two graphs relate to each other. The
+Horizontal line is 64 µs long, or 32 µs for a horizontal half line. Now round this off to 30 µs. In the “RSET Value
+Selection vs Vertical Serration Pulse Separation” graph the minimum resistor value for 30 µs serration pulse
+separation is about 550 kΩ. Going to the “Vertical Pulse Width vs RSET” graph one can see that 550 kΩ gives a
+vertical pulse width of about 180 µs, the total time for the vertical sync period of NTSC (3 horizontal lines). A 550
+kΩ will set the internal oscillator to a frequency such that eight cycles gives a time of 180 µs, just long enough to
+prevent a double vertical sync pulse at the vertical sync output of the LM1881.
+The LM1881 also generates a default vertical sync pulse when the vertical sync period is unusually long and has
+no serration pulses. With a very long vertical sync time the integrator has time to charge its internal capacitor
+above the voltage level V2. Since there is no falling edge at the end of a serration pulse to clock the “D” flip-flop,
+the only high signal going to the OR gate is from the default comparator when output of the integrator reaches
+V2. At this time the R/S flip-flop is toggled by the default comparator, starting the vertical sync pulse at pin 3 of
+the LM1881. If the default vertical sync period ends before the end of the input vertical sync period, then the
+falling edge of the vertical sync (positive pulse at the “D” flip-flop) will clock the high output from the comparator
+with V1 as a reference input. This will retrigger the oscillator, generating a second vertical sync output pulse. The
+“Vertical Default Sync Delay Time vs RSET” graph shows the relationship between the RSET value and the delay
+time from the start of the vertical sync period before the default vertical sync pulse is generated. Using the NTSC
+example again the smallest resistor for RSET is 500 kΩ. The vertical default time delay is about 50 µs, much
+longer than the 30 µs serration pulse spacing.
+A common question is how can one calculate the required RSET with a video timing standard that has no
+serration pulses during the vertical blanking. If the default vertical sync is to be used this is a very easy task. Use
+the “Vertical Default Sync Delay Time vs RSET” graph to select the necessary RSET to give the desired delay time
+for the vertical sync output signal. If a second pulse is undesirable, then check the “Vertical Pulse Width vs RSET”
+graph to make sure the vertical output pulse will extend beyond the end of the input vertical sync period. In most
+systems the end of the vertical sync period may be very accurate. In this case the preferred design may be to
+start the vertical sync pulse at the end of the vertical sync period, similar to starting the vertical sync pulse after
+the first serration pulse. A VGA standard is to be used as an example to show how this is done. In this standard
+a horizontal line is 32 µs long. The vertical sync period is two horizontal lines long, or 64 µs. The vertical default
+sync delay time must be longer than the vertical sync period of 64 µs. In this case RSET must be larger than 680
+kΩ. RSET must still be small enough for the output of the integrator to reach V1 before the end of the vertical
+period of the input pulse. The first graph can be used to confirm that RSET is small enough for the integrator.
+Instead of using the vertical serration pulse separation, use the actual pulse width of the vertical sync period, or
+64 µs in this example. This graph is linear, meaning that a value as large as 2.7 MΩ can be used for RSET (twice
+the value as the maximum at 30 µs). Due to leakage currents it is advisable to keep the value of RSET under 2.0
+MΩ. In this example a value of 1.0 MΩ is selected, well above the minimum of 680 kΩ. With this value for RSET
+the pulse width of the vertical sync output pulse of the LM1881 is about 340 µs.
+8 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 9 ===
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+Feature Description (continued)
+Figure 7. (a) Composite Video; (b) Composite Sync; (c) Vertical Output Pulse;
+(d) Odd and Even Field Index; (e) Burst Gate or Back Porch Clamp
+7.3.3 Odd and Even Field Pulse
+An unusual feature of LM1881 is an output level from Pin 7 that identifies the video field present at the input to
+the LM1881. This can be useful in frame memory storage applications or in extracting test signals that occur in
+alternate fields. For a composite video signal that is interlaced, one of the two fields that make up each video
+frame or picture must have a half horizontal scan line period at the end of the vertical scan—that is, at the bottom
+of the picture. This is called the “odd field” or “even field”. The “even field” or “field 2” has a complete horizontal
+scan line at the end of the field. An odd field starts on the leading edge of the first equalizing pulse, whereas the
+even field starts on the leading edge of the second equalizing pulse of the vertical retrace interval. Figure 7(a)
+shows the end of the even field and the start of the odd field.
+To detect the odd and even fields the LM1881 again integrates the composite sync waveform (Functional Block
+Diagram). A capacitor is charged during the period between sync pulses and discharged when the sync pulse is
+present. The period between normal horizontal sync pulses is enough to allow the capacitor voltage to reach a
+threshold level of a comparator that clears a flip-flop which is also being clocked by the sync waveform. When
+the vertical interval is reached, the shorter integration time between equalizing pulses prevents this threshold
+from being reached and the Q output of the flip-flop is toggled with each equalizing pulse. Because the half-line
+period at the end of the odd field will have the same effect as an equalizing pulse period, the Q output will have a
+different polarity on successive fields. Thus by comparing the Q polarity with the vertical output pulse, an odd
+and even field index is generated. Pin 7 remains low during the even field and high during the odd field.
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 9
+Product Folder Links: LM1881
+
+=== PDF PAGE 10 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+Feature Description (continued)
+7.3.4 Burst or Back Porch Output Pulse
+In a composite video signal, the chroma burst is located on the back porch of the horizontal blanking period. This
+period, approximately 4.8 µs long, is also the black level reference for the subsequent video scan line. The
+LM1881 generates a pulse at Pin 5 that can be used either to retrieve the chroma burst from the composite video
+signal (thus providing a subcarrier synchronizing signal) or as a clamp for the DC restoration of the video
+waveform. This output is obtained simply by charging an internal capacitor starting on the trailing edge of the
+horizontal sync pulses. Simultaneously the output of Pin 5 is pulled low and held until the capacitor charge circuit
+times out—4 µs later. A shorter output burst gate pulse can be derived by differentiating the burst output using a
+series C-R network. This may be necessary in applications which require high horizontal scan rates in
+combination with normal (60 Hz–120 Hz) vertical scan rates.
+7.4 Device Functional Modes
+7.4.1 Operation Mode
+In the normal operation mode, the LM1881 will extract video timing information and split the data up into the
+respective signals.
+The LM1881 will output four sync signals including the composite sync, a vertical sync pulse, a burst gate or
+back porch clamp pulse, and an odd and even output.
+The outputs from the LM1881can be used to gen-lock video camera/VTR signals with graphics sources, provide
+identification of video fields for memory storage, recover suppressed or contaminated sync signals, and provide
+timing references for the extraction of coded or uncoded data on specific video scan lines.
+10 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 11 ===
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+8 Application and Implementation
+NOTE
+Information in the following applications sections is not part of the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+8.1 Application Information
+Apart from extracting a composite sync signal free of video information, the LM1881 outputs allow a number of
+interesting applications to be developed. As mentioned above, the burst gate or back porch clamp pulse allows
+DC restoration of the original video waveform for display or remodulation on an R.F. carrier, and retrieval of the
+color burst for color synchronization and decoding into R.G.B. components. For frame memory storage
+applications, the odd and even field lever allows identification of the appropriate field ensuring the correct read or
+write sequence. The vertical pulse output is particularly useful since it begins at a precise time—the rising edge
+of the first vertical serration in the sync waveform. This means that individual lines within the vertical blanking
+period (or anywhere in the active scan line period) can easily be extracted by counting the required number of
+transitions in the composite sync waveform following the start of the vertical output pulse.
+The vertical blanking interval is proving popular as a means to transmit data which will not appear on a normal
+T.V. receiver screen. Data can be inserted beginning with line 10 (the first horizontal scan line on which the color
+burst appears) through to line 21. Usually lines 10 through 13 are not used which leaves lines 14 through 21 for
+inserting signals, which may be different from field to field. In the U.S., line 19 is normally reserved for a vertical
+interval reference signal (VIRS) and line 21 is reserved for closed caption data for the hearing impaired. The
+remaining lines are used in a number of ways. Lines 17 and 18 are frequently used during studio processing to
+add and delete vertical interval test signals (VITS) while lines 14 through 18 and line 20 can be used for
+Videotex/Teletext data. Several institutions are proposing to transmit financial data on line 17 and cable systems
+use the available lines in the vertical interval to send decoding data for descrambler terminals.
+Because the vertical output pulse from the LM1881 coincides with the leading edge of the first vertical serration,
+sixteen positive or negative transitions later will be the start of line 14 in either field. At this point simple counters
+can be used to select the desired line(s) for insertion or deletion of data.
+8.2 Typical Applications
+8.2.1 Video Line Selector
+The circuit in Figure 8 puts out a singe video line according to the binary coded information applied to line select
+bits b0–b7. A line is selected by adding two to the desired line number, converting to a binary equivalent and
+applying the result to the line select inputs. The falling edge of the LM1881's vertical pulse is used to load the
+appropriate number into the counters (MM74C193N) and to set a start count latch using two NAND gates.
+Composite sync transitions are counted using the borrow out of the desired number of counters. The final borrow
+out pulse is used to turn on the analog switch (CD4066BC) during the desired line. The falling edge of this signal
+also resets the start count latch, thereby terminating the counting.
+The circuit, as shown, will provide a single line output for each field in an interlaced video system (television) or a
+single line output in each frame for a non-interlaced video system (computer monitor). When a particular line in
+only one field of an interlaced video signal is desired, the odd and even field index output must be used instead
+of the vertical output pulse (invert the field index output to select the odd field). A single counter is needed for
+selecting lines 3 to 14; two counters are needed for selecting lines 15 to 253; and three counters will work for up
+to 2046 lines. An output buffer is required to drive low impedance loads.
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 11
+Product Folder Links: LM1881
+
+=== PDF PAGE 12 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+Typical Applications (continued)
+Figure 8. Video Line Selector
+8.2.1.1 Design Requirements
+The design must have a single line output in an interlaced video system.
+The use case can be used for televisions of computer monitors.
+8.2.1.2 Detailed Design Procedure
+For the composite input pin, a 510-pF capacitor and 620-Ω resistor are selected to create a lowpass filter for 500
+kHz.
+For Rset, a 680-kΩ was selected to allow for the Vertical Default Sync Delay Time to be set for 64 uS. Please
+refer to Figure 2 for Rset value selection.
+12 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 13 ===
+LM1881
+www.ti.com SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015
+Typical Applications (continued)
+8.2.2 Multiple Contiguous Video Line Selector With Black Level Restoration
+The circuit in Figure 9 will select a number of adjoining lines starting with the line selected as in the previous
+example. Additional counters can be added as described previously for either higher starting line numbers or an
+increased number of contiguous output lines. The back porch pulse output of the LM1881 is used to gate the
+video input's black level through a lowpass filter (10-kΩ, 10-µF) providing black level restoration at the video
+output when the output selected line(s) is not being gated through.
+Figure 9. Multiple Contiguous Video Line Selector With Black Level Restoration
+8.2.2.1 Design Requirements
+The design will select a number of adjoining lines starting with the line selected in the previous application
+example.
+8.2.2.2 Detailed Design Procedure
+Another MM74C193N counter is added to the design to support the additional line outputs.
+A 10-kΩ resistor and 10-uF capacitor is added to the output of the BURST/BLACK Porch pin to create a low pass
+filter which adds in black level restoration to the video.
+For the composite input pin, a 510-pF capacitor and 620-Ω resistor are selected to create a lowpass filter for 500
+kHz.
+For Rset, a 680-kΩ was selected to allow for the Vertical Default Sync Delay Time to be set for 64 uS. Please
+refer to Figure 2 for Rset value selection.
+9 Power Supply Recommendations
+The LM1881 is designed to operate from an input voltage supply range between 5 VDC and 12 VDC.
+The LM1881 requires external a decoupling capacitor at Pin 8 and another at Pin 6.
+Copyright © 1995–2015, Texas Instruments Incorporated Submit Documentation Feedback 13
+Product Folder Links: LM1881
+
+=== PDF PAGE 14 ===
+LM1881
+SNLS384G – FEBRUARY 1995 – REVISED JUNE 2015 www.ti.com
+10 Device and Documentation Support
+10.1 Community Resources
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+10.2 Trademarks
+E2E is a trademark of Texas Instruments.
+All other trademarks are the property of their respective owners.
+10.3 Electrostatic Discharge Caution
+These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+during storage or handling to prevent electrostatic damage to the MOS gates.
+10.4 Glossary
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+11 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+14 Submit Documentation Feedback Copyright © 1995–2015, Texas Instruments Incorporated
+Product Folder Links: LM1881
+
+=== PDF PAGE 15 ===
+PACKAGE OPTION ADDENDUM
+www.ti.com 9-Apr-2026
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+LM1881M/NOPB Last
+Time Buy
+Production SOIC (D) | 8 95 | TUBE Yes SN Level-1-260C-UNLIM 0 to 70 LM
+1881M
+LM1881M/NOPB.B Last
+Time Buy
+Production SOIC (D) | 8 95 | TUBE Yes SN Level-1-260C-UNLIM 0 to 70 LM
+1881M
+LM1881MX/NOPB Last
+Time Buy
+Production SOIC (D) | 8 2500 | LARGE T&R Yes SN Level-1-260C-UNLIM 0 to 70 LM
+1881M
+LM1881MX/NOPB.B Last
+Time Buy
+Production SOIC (D) | 8 2500 | LARGE T&R Yes SN Level-1-260C-UNLIM 0 to 70 LM
+1881M
+LM1881N/NOPB Obsolete Production PDIP (P) | 8 - - Call TI Call TI - LM1881N
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+Addendum-Page 1
+
+=== PDF PAGE 16 ===
+PACKAGE OPTION ADDENDUM
+www.ti.com 9-Apr-2026
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+Addendum-Page 2
+
+=== PDF PAGE 17 ===
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+LM1881MX/NOPB SOIC D 8 2500 330.0 12.4 6.5 5.4 2.0 8.0 12.0 Q1
+Pack Materials-Page 1
+
+=== PDF PAGE 18 ===
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+LM1881MX/NOPB SOIC D 8 2500 367.0 367.0 35.0
+Pack Materials-Page 2
+
+=== PDF PAGE 19 ===
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 10-Aug-2026
+TUBE
+ 
+ 
+L - Tube length
+T - Tube  
+height
+W - Tube  
+width
+B - Alignment groove width
+ 
+ 
+*All dimensions are nominal
+Device Package Name Package Type Pins SPQ L (mm) W (mm) T (µm) B (mm)
+LM1881M/NOPB D SOIC 8 95 495 8 4064 3.05
+LM1881M/NOPB.B D SOIC 8 95 495 8 4064 3.05
+Pack Materials-Page 3
+
+=== PDF PAGE 20 ===
+www.ti.com
+PACKAGE OUTLINE
+C
+.228-.244  TYP
+[5.80-6.19]
+.069 MAX
+[1.75]     
+6X .050
+[1.27]
+8X .012-.020
+     [0.31-0.51]
+2X
+.150
+[3.81]
+.005-.010  TYP
+[0.13-0.25]
+0 - 8 .004-.010
+[0.11-0.25]
+.010
+[0.25].016-.050
+[0.41-1.27]
+4X (0 -15 )
+A
+.189-.197
+[4.81-5.00]
+NOTE 3
+B .150-.157
+[3.81-3.98]
+NOTE 4
+4X (0 -15 )
+(.041)
+[1.04]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: 
+ 
+1. Linear dimensions are in inches [millimeters]. Dimensions in parenthesis are for reference only. Controlling dimensions are in inches.
+    Dimensioning and tolerancing per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed .006 [0.15] per side. 
+4. This dimension does not include interlead flash.
+5. Reference JEDEC registration MS-012, variation AA.
+ 
+1 8
+.010 [0.25] C A B
+5
+4
+PIN 1 ID AREA
+SEATING PLANE
+.004 [0.1] C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  2.800
+
+=== PDF PAGE 21 ===
+www.ti.com
+EXAMPLE BOARD LAYOUT
+.0028 MAX
+[0.07]
+ALL AROUND
+.0028 MIN
+[0.07]
+ALL AROUND
+ 
+(.213)
+[5.4]
+6X (.050 )
+[1.27]
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+EXPOSED
+METAL
+OPENING
+SOLDER MASK METAL UNDER
+SOLDER MASK
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:8X
+SYMM
+1
+4 5
+8
+SEE
+DETAILS
+SYMM
+
+=== PDF PAGE 22 ===
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (.061 )
+[1.55]
+8X (.024)
+[0.6]
+6X (.050 )
+[1.27]
+(.213)
+[5.4]
+(R.002 ) TYP
+[0.05]
+SOIC - 1.75 mm max heightD0008A
+SMALL OUTLINE INTEGRATED CIRCUIT
+4214825/C   02/2019
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON .005 INCH [0.125 MM] THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+1
+4 5
+8
+
+=== PDF PAGE 23 ===
+
+
+=== PDF PAGE 24 ===
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

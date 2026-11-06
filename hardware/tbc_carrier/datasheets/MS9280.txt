@@ -1,0 +1,1232 @@
+
+=== PDF PAGE 1 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 1 - 
+10-Bit, 35MSPS A/D Converter 
+ 
+PRODUCT DESCRIPTION 
+The MS9280 is a single -chip, single power supply, 10bit,  35MSPS 
+analog-to-digital converter. It is integrated with the sample -and-hold 
+amplifier and reference power supply internally. The MS9280 uses 
+multistage differential pipeline architecture  to guarantee no missing 
+codes over the full operating temperature range at 35MSPS data rate. 
+The input of the MS9280 is suitable for image, video and 
+communication system. User can select single -ended input or 
+differential inputs according to actual need. User can also select input 
+range and eliminate offset. 
+The sample -and-hold amplifier in the MS9280 is suitable for both 
+multiplexed system and successive channels that switch full -scale 
+voltage. The input frequency of sampling single channel can exceed the 
+Nyquist rate. With internal clamp circuit, ac -coupled input can be 
+shifted to a fixed level, and the dynamic performance is excellent. 
+The MS9280 is integrated with programmable reference internally. 
+An external r eference with high precision can be chosen to satisfy the 
+system accuracy requirements according to the need of system. 
+A single clock input controls the internal conversion cycle. The digital 
+output is in binary data information. The out-of-range (OTR) represents 
+that the input signal exceeds the minimum or maximum quantization 
+range. 
+The MS9280 operates in a single power supply ranging from 2.7V to 
+5.5V and suits for high -speed and low  power dissipation applications. 
+The industrial temperature of the MS9280 is from -40° C to +125° C. 
+ 
+FEATURES 
+⚫ 10bit, 35MSPS Pipeline ADC 
+⚫ Low Power Dissipation: 90mV (3V Power Supply) 
+⚫ Wide Operating Voltage Range: 2.7V  5.5V 
+⚫ High Linearity: DNL: 0.2 LSB 
+⚫ Low Power Dissipation Control Mode  
+⚫ Three-state Outputs 
+⚫ Quantized Range Detection  
+⚫ Built-in Clamp Function 
+⚫ High-precision Programmable Reference 
+⚫ IF Sub-sampling up to 135MHz 
+ 
+APPLICATIONS 
+⚫ Image and Video 
+⚫ Communication System 
+ 
+PRODUCT SPECIFICATIONS 
+ 
+Part Number Package Marking 
+MS9280 SSOP28 MS9280 
+ 
+ 
+ 
+SSOP28 
+
+=== PDF PAGE 2 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 2 - 
+PIN CONFIGURATION 
+ 
+1
+2
+3
+4
+28
+27
+26
+25
+AVSS
+DRVDD
+D0
+AVDD
+AIN
+5
+6
+7
+8
+24
+23
+22
+21
+D2
+D3
+D4
+D5
+MODE
+REFTF
+REFTSMS9280
+9
+10
+D6
+D7
+20
+19
+CL AMPIN
+CL AMP
+11
+12
+18
+17
+D8
+D9
+REFSENSE
+STBY
+13
+14
+OTR
+DRVSS
+16
+15
+THREE-STATE
+CL K
+D1
+VR EF
+REFBS
+REFBF
+ 
+ 
+
+=== PDF PAGE 3 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 3 - 
+PIN DESCRIPTION 
+ 
+Pin Name Description 
+1 AVSS Analog Ground 
+2 DRVDD Digital Power Supply 
+3-12 D0-D9 Digital Bit. D0 is the LSB, and D9 is the MSB 
+13 OTR Out-of-Range Detection 
+14 DRVSS Digital Ground 
+15 CLK Clock Input 
+16 THREE_STATE 
+Three-state Control.  
+High: High Impedance State; Low: Normal Operation 
+17 STBY Standby Mode. High: Standby Mode; Low: Normal Operation 
+18 REFSENSE Reference Selection 
+19 CLAMP Clamp Control. High: Clamp Mode; Low: No Clamp Mode 
+20 CLAMPIN Clamp Voltage Setting 
+21 REFTS Top Reference 
+22 REFTF Top Reference Decoupling 
+23 MODE Mode Selection 
+24 REFBF Bottom Reference Decoupling 
+25 REFBS Bottom Reference 
+26 VREF Internal Reference Voltage 
+27 AIN Analog Input 
+28 AVDD Analog Power Supply 
+ 
+
+=== PDF PAGE 4 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 4 - 
+BLOCK DIAGRAM 
+ 
+Calibration Logic
+Output Buffer
+SHA SUM SHA
+ADC DAC
+SHA SHA SHA
+ADC
+2.5 2.5 2.5 2.5 2
+1V
++
+-
++
+CLAMP CLAMPIN CLK AVDD DRVDD
+STBY
+MODE
+THREE-STATE
+OTR
+REFSENSE AVSS DRVSS D0-D9
+  
+AIN
+REFTF
+REFTS
+REFBS
+REFBF
+VREF
+ 
+
+=== PDF PAGE 5 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 5 - 
+ABSOLUTE MAXIMUM RATINGS 
+Any exceeding absolute maximum rating application causes permanent damage to device. Because 
+long-time absolute operation state affects device reliability. Absolu te ratings just conclude from a 
+series of extreme tests. It doesn’t represent chip can operate normally in these extreme conditions.  
+Parameter With Respect to Symbol Range Unit 
+Analog Power Supply AVSS AVDD -0.3  +6.5 V 
+Analog Power Supply DRVDD AVDD -6.5  +6.5 V 
+Digital Power Supply DRVSS DRVDD -0.3  +6.5 V 
+Analog Ground DRVSS AVSS -0.3  +0.3 V 
+Mode Selection Pin Voltage AVSS MODE -0.3  AVDD + 0.3 V 
+Clock Input Pin Voltage AVSS CLK -0.3  AVDD + 0.3 V 
+Digital Output Voltage DRVSS  -0.3  DRVDD + 0.3 V 
+Analog Input Voltage AVSS AIN -0.3  AVDD + 0.3 V 
+Internal Reference Voltage AVSS VREF -0.3  AVDD + 0.3 V 
+Reference Selection Pin Voltage AVSS REFSENSE -0.3  AVDD + 0.3 V 
+Top Reference Voltage Decoupling, 
+Bottom Reference Voltage Decoupling 
+AVSS REFTF, REFBF -0.3  AVDD + 0.3 V 
+Top Reference Voltage,  
+Bottom Reference Voltage  
+AVSS REFTS, REFBS -0.3  AVDD + 0.3 V 
+Junction Temperature  +150 °C 
+Storage Temperature  -65  +150 °C 
+Lead Temperature (10s)  +300 °C 
+ 
+ 
+
+=== PDF PAGE 6 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 6 - 
+ELECTRICAL CHARACTERISTICS 
+Unless otherwise noted, AVDD=+3V, DRVDD=+3V, Fs=3 5MHz (50% duty cycle), MODE=AVDD, 2V 
+input range: from 0.5V to 2.5V, external reference. 
+Parameter Symbol Min Typ Max Unit 
+Resolution   10  Bits 
+Conversion Rate    35 MHz 
+Differential Nonlinearity DNL ±0.2  ±1.0 LSB 
+Integral Nonlinearity INL ±0.3  ±1.5 LSB 
+Offset Error EZS ±0.2  ±1.8 %FSR 
+Gain Error EFS ±1.2  ±3.9 %FSR 
+Top Reference Voltage REFTS 1  AVDD V 
+Bottom Reference Voltage REFBS GND  AVDD-1 V 
+Differential Reference Voltage   2  V 
+VREF (1V)   1  V 
+Reference Tolerance   10 25 mV 
+VREF (2V)   2  V 
+Load Regulation (1V)   0.5 2 mV 
+Input Voltage Range AIN REFBS  REFTS V 
+Input Capacitance CIN  1  pF 
+Aperture Delay tAD  4  ns 
+Aperture Jitter tAJ  2  ps 
+Input Bandwidth BW  300  MHz 
+DC Leakage Current   43  μA 
+Analog Voltage AVDD 2.7 3 5.5 V 
+Digital Drive Voltage DRVDD 2.7 3 5.5 V 
+Power Supply Current IAVDD  31.7 36.7 mA 
+Power Dissipation PD  95 110 mW 
+Sleep Mode   4  mW 
+Gain Error Power Supply Rejection Ratio   1  %FS 
+Signal-to-Noise Ratio SNR 47.8  49 dB 
+Signal-to-Noise and Distortion Ratio SINAD 46.5  49 dB 
+
+=== PDF PAGE 7 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 7 - 
+Parameter Symbol  Min Typ Max Unit 
+Effective Bits  7.7  7.8 dB 
+Total Harmonic Distortion THD  -62 -49.5 dB 
+Spurious Free Dynamic Range  SFDR 66  51.4 dB 
+Differential Phase DP  0.2  Degree 
+Differential Gain DG  0.08  % 
+High-Level Input Voltage VIH 2.4   V 
+Low-Level Input Voltage VIL   0.3 V 
+Output High Impedance IOZ -10  +10 μA 
+Data Valid Delay tOD  25  ns 
+Data Enable Delay tDEN  25  ns 
+Data High-impedance Delay tDHZ  13  ns 
+Digital High-Level Output Voltage (Io=50μA) 
+VOH 
+2.95   V 
+Digital High-Level Output Voltage (Io=500μA) 2.8   V 
+Digital Low-Level Output Voltage (Io=1.6mA) 
+VOL 
+  0.4 V 
+Digital Low-Level Output Voltage (Io=50μA)   0.05 V 
+Digital High-Level Output Voltage (Io=50μA) 
+VOH 
+4.5   V 
+Digital High-Level Output Voltage (Io=500μA) 4.4   V 
+Digital Low-Level Output Voltage (Io=1.6mA) 
+VOL 
+  0.4 V 
+Digital Low-Level Output Voltage (Io=50μA)   0.1 V 
+Clock High-Level Pulse Width  tCH 10   ns 
+Clock Low-level Pulse Width  tCL 10   ns 
+Pipeline Latency   3  Cycles 
+Clamp Error Voltage EOC  50 80 mV 
+Clamp Pulse Width tCPW  2  μs 
+  
+ 
+
+=== PDF PAGE 8 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 8 - 
+APPLICATIONS INFORMATION 
+Operating Principle 
+The MS9280 implements a pipelined multistage architecture to achieve low power dissipati on and 
+high-speed data conversion. It divides the whole conversion accuracy into single-order converters with 
+low accuracy. The results of each order conversion achieve high -precision data conversion through 
+internal digital calibration circuit under the timing control. 
+ 
+Operating Mode 
+The MS9280 is suitable for various kinds of image, video, communication and instrumentation 
+applications, compatible with series AD876 -8 series. Appropriate operating modes can be chosen to 
+optimize characteristics according to factual system. To realize its flexibility, t he internal 
+programmable switches realize the different operating modes. The three internal modules: voltage 
+reference, voltage buffer and analog input can be chosen  in different switching modes. See Table 1 
+and mode description legends for the specific implementation form and operating modes. 
+Table 1. Mode Selection 
+Mode 
+Input 
+Connection 
+Input 
+Span 
+Mode Pin 
+REFSENSE 
+Pin 
+REF REFTS REFBS 
+Top/Bottom 
+AIN 1V AVDD Short REFSENSE、REFTS and VREF AGND 
+AIN 2V AVDD AGND Short REFTS and VREF AGND 
+Center  
+AIN 1V AVDD/ 2 Short VREF and REFSENSE AVDD/ 2 AVDD/ 2 
+AIN 2V AVDD/ 2 AGND 
+Not 
+Connection 
+AVDD/ 2 AVDD/ 2 
+Differential 
+AIN is input 
+1, REFTS and 
+REFBS are 
+shorted for 
+input 2 
+1V AVDD/ 2 Short VREF and REFSENSE AVDD/ 2 AVDD/2 
+2V AVDD/ 2 AGND 
+Not 
+Connection 
+AVDD/ 2 AVDD/ 2 
+External 
+Reference 
+AIN 2V Max 
+AVDD 
+AVDD 
+Not 
+Connection 
+Span=REFTS-REFBS 
+AGND 
+Short to 
+VREFTF 
+Short 
+to 
+VREFBF 
+AD876-8 AIN 2V 
+Floating 
+or AVSS 
+AVDD 
+Not 
+Connection 
+Short to 
+VREFTF 
+Short 
+to 
+VREFBF 
+ 
+
+=== PDF PAGE 9 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 9 - 
+A/D
+CoreSHA
+AIN
+REFTS
+REFBS
+ 
+         Figure 1. The MS9280 Equivalent Functional Input Circuit 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+(AVDD)
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
++FS
+-FS
+ 
+Figure 2a. Top/Bottom Mode 
+ 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+Midscale 
+Level
+Internal 
+REF
+AVDD/2
+ 
+Figure 2b. Center Voltage Mode 
+ 
+
+=== PDF PAGE 10 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 10 - 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+V
+Internal 
+REF
+AVDD/2
+AVDD/2
+ 
+Figure 2c. Differential Mode 
+ 
+A1
++-
+0.1μF  
+1V
++
+-
+VREF(1V)
+1.0μF  
+REFSENSE
+AVSS
+ 
+Figure 2d. 1V Reference Mode 
+ 
+A1
++-
+0.1μF  
+1V
++
+-
+VREF(2V)
+1.0μF  
+REFSENSE
+AVSS
+10kΩ 
+10kΩ 
+ 
+Figure 2e. 2V Reference Mode 
+ 
+
+=== PDF PAGE 11 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 11 - 
+A1
++-
+0.1μF  
+1V
++
+-
+VREF(=1+RA/RB)
+1.0μF  
+REFSENSE
+AVSS
+RA
+RB
+ 
+Figure 2f. Variable Reference Mode (between 1V and 2V) 
+ 
+A1
++-
+1V
++
+-
+VREF
+REFSENSE
+AVDD
+ 
+Figure 2g. Internal Reference Disable Mode 
+ 
+REFTF
+REFBF
+10μF  0.1μF  
+0.1μF  0.1μF  
+ 
+Figure 3. Reference Decoupling Network 
+ 
+ 
+
+=== PDF PAGE 12 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 12 - 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+2V
+0V
+AVDD
+A1
++ -
+1V
++
+-
+VREF
+0.1μF  1.0μF  
+REFSENSE
+ 
+Figure 4. Internal Reference, 2V Input Range (Top/Bottom Mode) 
+ 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+2V
+1V
+AVDD/2
+A1
++ -
+1V
++
+-
+VREF
+0.1μF  1.0μF  
+REFSENSE
+10kΩ 
++1.5V
+ 
+Figure 5. Internal Reference, 1V Input Range (Center Voltage Mode) 
+ 
+ 
+
+=== PDF PAGE 13 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 13 - 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+MODE
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+1V
+0V
+AVDD
+A1
++ -
+1V
++
+-
+VREF
+0.1μF  1.0μF  
+REFSENSE
+ 
+Figure 6. Internal Reference, 1V Input Range (Top/Bottom Mode) 
+ 
+SHA
+AIN
+A2
+10kΩ 
+10kΩ 
+10kΩ 
+10kΩ 
+REFTS
+REFBS
+REFTF
+A/D
+Core
+4.2kΩ
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+2V
+1V
+REFSENSE
+MODE
+AVDD
+2V
+1V
+ 
+Figure 7. External Reference, 1V Input Range (Top/Bottom Mode) 
+ 
+ 
+
+=== PDF PAGE 14 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 14 - 
+AIN
+REFTS
+REFBS
+REFTF
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+3.0V
+2.0V
+AVDD
+MODE
+0.1μF  1.0μF  
+REFSENSE
+A3+
+-
+AVDD2.5V
+AVDD
+AVDD/2
+VREF
+1.5kΩ
+1kΩ
+0.1μF  
+0.1μF  
+10μF  
+REF43
+0.1μF  
++5V
+ 
+Figure 8. External Reference, 1V Input Range (Center Span Mode) 
+ 
+ 
+AIN
+REFTS
+REFTF
+4V
+2V
+MODE
+REFSENSEAVDD
+VREF
+4V
+REFBF
+0.1μF  
+REFBS
+2V
+0.1μF  0.1μF  
+10μF  
+ 
+ 
+Figure 9a. External Reference, 2V Input Range (Top/Bottom Mode) 
+ 
+
+=== PDF PAGE 15 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 15 - 
+REFTS
+REFTF
+REFBS
+REFBF
+0.1μF  
++
+-
+0.1μF  0.1μF  
+10μF  
+REFT
+0.1μF  
++
+-
+0.1μF  REFB
++5V
+ 
+ 
+Figure 9b. Kelvin Connected External Reference Mode 
+ 
+Sleep Mode 
+The MS9280 can enter sleep mode by setting the STBY pin in logic high level and keep ing the clock 
+in low level. In this mode, the typical power dissipation is about 4mW. After STBY is low, the chip 
+enters normal mode after 400ns. 
+ 
+Clamp Function 
+The MS9280 is integrated with clamp circuit to achieve AC -coupled input signal and video signal DC 
+recovery internally. Figure 10 shows the internal clamp circuit and external control signals needed for 
+clamp operation. In order to enable clamp, logic high-level is applied to the CLAMP pin, which will turn 
+off SW1. The internal clamp amplifier operates in buffer mode . The DC voltage on the AIN pin is 
+clamped to the voltage on CAMPLIN pin. After achieving expected clamp voltage, SW1 will be turned 
+on because the CLAMP pin becomes low l evel. Ignoring the voltage  change caused by  input bias 
+current, the input capacitor holds the clamp ed DC voltage until the next clamp interval arrives. To 
+guarantee the closed-loop stability of the internal clamp amplifier, the recommended minimum input 
+resistance is 10Ω. 
+The allowable voltage range o f the CLAMPIN pin is decided by operation limits of internal clamp 
+amplifier. And the recommended value between 0.5V and 2.5V. 
+The input capacitor depends on the sufficient capture time allowed by the input voltage AIN within 
+the clamp interval and the minimum voltage drop between the clamp interval s. Speci fically, the 
+capture time when the switch is turned off is determined by the following formula:  
+C
+ACQ IN IN
+E
+Vt =R C In V
+
+
+
+ 
+Where, Vc is the voltage variatio n at both ends of capacitor. V E is error voltage. V c is the difference 
+voltage between the initial DC input at the beginning of the clamp interval and  the input clamp 
+
+=== PDF PAGE 16 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                   2023.04.17      
+http://www.relmon.com                                                            - PAGE 16 - 
+voltage provided by the CLAMPIN pin. V E is a system parameter, which is equal to the maximum 
+allowable deviation of V C. For example, 2V input level needs to be clamped at 1V DC level, the 
+allowable deviation is 10mV, then V C=1V, VE=10mV. Once the suitable clamp level is obtained at the 
+input, a very small voltage change is needed to ensure DC level deviation. 
+The voltage drop is calculated by the following formula: 
+BIAS
+IN
+IdV= (t)C
+ 
+Where, t is the clamp interval. Input bias current of the MS9280 is determined by sampling 
+frequency Fs, reference center voltage (REFTS-REFBS)/2 and input voltage. 
+The voltage drop within the clamp interval is an important parameter. The minimum input 
+capacitance is calculated based on needed voltage drop. Capture time  - clamp pulse width is adjusted 
+according to the selected minimum capacitance. In factua l system, the trade -off is needed to be 
+considered between capture time, clamp voltage drop and error voltage.
+ 
+CLAMPIN
+AIN
++
+-
+CLAMP
+SW1
+SHARINCIN
+ 
+Figure 10a. Clamp Circuit 
+AIN
+REFTF
+REFTS
+CLAMPIN
+CLAMP
+AVDD/2 MODE
+REFBF
+0.1μF  
+REFBS
+10μF  
+Short to REFBS or Internal DC
+0.1μF  
+0.1μF  
+ 
+Figure 10b. Video Clamp Circuit 
+
+=== PDF PAGE 17 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 17 - 
+Driving Circuit of Analog Input  
+Figure 11 shows the equivalent analog input  circuit. The MS9280 is integrated with a sample -and-hold 
+amplifier internally. When the clock input is in low level, Switch 1, 2 are closed and Switch 3 is opened. Analog 
+input signal charges the sampling capacitor CH. When the clock transits from low level to high level, Switch 1 
+and 2 are opened, placing the sample-and-hold amplifier in hold mode. Then Switch 3 is closed, the output of 
+the amplifier is equal to the voltage stored on CH. When the clock transits from high level to low level, Switch 
+3 is opened first, then Switch 1 and 2 are closed, placing the sample-and-hold amplifier in track mode.  
+The structure of the sample-and-hold amplifier has requirements for the analog i nput driving ability. The 
+pin capacitance CP and the hold capacitance CH are less than 5 pF generally. The input signal source must be 
+able to charge or discharge these capacitors to the voltage value required by 10bit accuracy in half of a clock 
+cycle. When the sample -and-hold amplifier goes into track mode, the input signal source must charge or 
+discharge capacitor CH from the stored voltage for last cycle to the new voltage. In the worst case, within half 
+of clock cycle, the input signal provides the char ging current. The on -resistance of the Switch 1 is the 
+conversion of the maximum input signal peak of the sampling capacitor. This is equal to driving a low input 
+impedance circuit. On the other hand, when the input signal source voltage is equal to the pr eviously stored 
+voltage, the hold capacitor requires no input current and the equivalent input impedance is extremely high. 
+Adding series resistor between the input signal source and the AIN pin can reduce the drive requirements 
+of the signal source, as shown in figure 12. The bandwidth of the some particular applications limit the size of 
+series resistor. The resistor should be limited to  20Ω or less  to ensure the system characteristics. For the 
+application with signal bandwidths less than the Nyquist  rate, user  can increase the resis tance properly . 
+Adding a shunt capacitor to ground can decrease the AC load impedance. The value of the capacit or depends 
+on the source resistance and the required signal bandwidth. 
+The input range of the MS9280 is a function o f the reference voltage. For the selection of input range, it is 
+determined according to the different programming of the internal reference and external reference.  
+In many applications, especially for single power supply operation, AC coupling offers a c onvenient way of 
+biasing the analog input signal at the proper signal range. Figure 13 shows a typical structure for AC -coupled 
+analog input signal. The -3dB high -pass corner frequency is a very important conside ration parameter. 
+-3dB EQf =1/(2*pi*R2*C )
+, where 
+EQC is the parallel combination of C1 and C2. 
+The choice of the resistor needs to be specially  considered. The AC-coupled capacitor integrates the switch 
+propagation characteristics, causing a net DC bias current to flow int o the input. Bias current increases as the 
+signal magnitude deviates from center reference voltage and sampling frequencies increase. When input 
+signal is equal to reference center value, input bias current is lowest and offset error is generated 
+B(R1+R2)*I . 
+If it is necessary to compensate this error, considering reducing R2 or adjusting VBIAS to meet the needed 
+offset requirement. 
+DC coupling must be used in system application. Using operational amplifier to change the 
+ground-referenced signal DC level to ensure that input signal  is in the appropriate quantization range. Figure 
+14 shows an AD8041 circuit structure in non-inverting mode. 
+
+=== PDF PAGE 18 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 18 - 
+The MS9280 can adopt differential input signal mode. This structure can be achieved by shorting two inputs: 
+REFTS and REFBS, as an differential input. Figure 15 shows the differential input mode of 1V P-P signal. 
+SHA
+-
+AIN
+REFTS
+REFBS
++
+CH
+CH
+CP
+S1
+S3
+CP
+S2
+ 
+         Figure 11. The MS9280 Equivalent Input Structure 
+ 
+AIN
+VS
+<20Ω 
+            
+Figure 12. The MS9280 Simple Drive Circuit 
+ 
+AIN
+VBIAS
+R1 
+IBR2 
+VIN
+C1 
+C2 +
+-
+ 
+Figure 13. AC-Coupled Input 
+ 
+AIN
+20Ω  
+AD8041
+7
+1
+6
+5
+4
+3
+2
++
+-
+NC
+NC
++VCC
+0.1μF 
+Midscale Offset 
+Voltage
+1VP-P0VDC
+ 
+Figure 14. Bipolar Level Shift Structure 
+ 
+
+=== PDF PAGE 19 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 19 - 
+AIN
+REFTS
+REFBS
+REFTF
+REFBF
+0.1μF  10μF  
+0.1μF  
+0.1μF  
+2V
+1V
+MODE
+0.1μF  1.0μF  
+REFSENSE
+AVDD/2
+VREF
+AVDD/2
+ 
+Figure 15. Differential Input Structure 
+ 
+Operating Mode of the AD876-8  
+The MS9280 can replace  the AD876-8 series  by pin configurations to reduce the system power 
+dissipation using the AD876-8 originally. Figure 16 shows the pin configurations that the M S9280 replaces 
+the AD876-8. By the REFSENSE pin grounding, the MODE pin floating and the CLAMP pin grounding, using 
+external reference mode can replace the original AD876-8. 
+AIN
+REFTS
+REFTF
+4V
+2V
+MODE
+REFSENSEAVDD
+VREF
+4V
+REFBF
+0.1μF  
+REFBS
+2V
+0.1μF  0.1μF  
+10μF  
+NC
+0.1μF  
+OTR
+CLAMP
+CLAMPIN
+ 
+Figure 16. The AD876 Mode 
+
+=== PDF PAGE 20 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 20 - 
+Clock Input 
+The clock input of the MS9280 provides the circuit clock through internal inverting buffer.  And the internal 
+inverter is powered by the AVDD pin. This feature allows the clock to accommodate either +5V or +3.3V CMOS 
+logic input signal and the input threshold voltage is AVDD/ 2. 
+The pipelined architecture of the MS9280 operates on both rising and falling edges of the clock. High -speed 
+or advanced CMOS logic clock (HC/HCT , AC/ACT) is recommended for minimizing duty cycle variations. CMOS 
+logic provides symmetrical voltage threshold levels and sufficient rising and falling times to support 35MSPS 
+sampling operation. The highest clock frequency bit designed  by the MS9280  is 35MHz. The higher clock 
+frequency will weaken the system characteristics. Choosing the lower clock frequency can improve the system 
+performance. The power dissipated by the output buffers is mainly proportional to clock frequency. The lower 
+clock frequency can reduce power dissipation. 
+ 
+S1 S2
+S3
+S4
+tC
+tCH tCL
+Analog Input
+Clock Input
+Data Output DATA 1
+25ns
+Figu
+re 17. Timing Diagram 
+ 
+Digital Input and Output 
+Each of the MS9280 digital control inputs: THREE_STATE, STBY and CLK are all referenced to analog ground. 
+The digital output is in straight binary form at, as shown in Figure 18. When STBY is high and the CLK is 
+disabled, the circuit is in low power dissipation mode and the static power dissipation drops to 5mW. 
+ 
+OTR
+-FS
+-FS+1LSB +FS
++FS-1LSB
+ 
+Figure 18. Data Output Format 
+
+=== PDF PAGE 21 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 21 - 
+Three-State
+Data
+(D0-D9)
+tDHZ tDEN
+High Impedance
+ 
+Figure 19. Three-State Timing Diagram 
+ 
+
+=== PDF PAGE 22 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 22 - 
+PACKAGE OUTLINE DIMENSIONS   
+SSOP28  
+  
+ 
+ 
+Symbol 
+Dimensions in Millimeters Dimensions in Inches 
+Min Max Min Max 
+A - 2.000 - 0.079 
+A1 0.050 - 0.002 - 
+A2 1.650 1.850 0.065 0.073 
+b 0.220 0.380 0.009 0.015 
+c 0.090 0.250 0.004 0.010 
+D 9.900 10.500 0.390 0.413 
+E 7.400 8.200 0.291 0.323 
+E1 5.000 5.600 0.197 0.220 
+e 0.650BSC 0.026BSC 
+L 0.550 0.950 0.022 0.037 
+θ 0° 8° 0° 8° 
+ 
+
+=== PDF PAGE 23 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 23 - 
+MARKING and PACKAGING SPECIFICATIONS 
+1. Marking Drawing Description 
+MS9280
+XXXXXX
+ 
+Product Name: MS9280 
+Product Code: XXXXXX      
+ 
+2. Marking Drawing Demand 
+Laser printing, contents in the middle, font type Arial. 
+ 
+3. Packaging Specification 
+ 
+ 
+ 
+ 
+Device Package Piece/Reel Reel/Box Piece /Box Box/Carton Piece/Carton 
+MS9280 SSOP28 2000 1 2000 8 16000 
+
+=== PDF PAGE 24 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 24 - 
+STATEMENT 
+⚫ All Revision Rights of Datasheets Reserved for Ruimeng. Don’t release additional notice. 
+Customer should get latest version information and verify the integrity before placing order. 
+⚫ When using Ruimeng products to design and produce, purchaser has the responsibility to  observe safety 
+standard and adopt corresponding precautions, in order to avoid personal injury and property loss 
+caused by potential failure risk. 
+⚫ The process of improving product is endless. And our company would sincerely provide more excellent 
+product for customer. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 25 ===
+ 
+MS9280 
+ 
+ 
+Hangzhou Ruimeng Technology Co.,Ltd            VERSION: V1.3                         2023.04.17      
+http://www.relmon.com                                                                  - PAGE 25 - 
+ 
+MOS CIRCUIT OPERATION PRECAUTIONS 
+Static electricity can be generated in many places. The following precautions can be taken  
+to effectively prevent the damage of MOS circuit caused by electrostatic discharge: 
+ 
+1. The operator shall ground through the anti-static wristband. 
+2. The equipment shell must be grounded. 
+3. The tools used in the assembly process must be grounded. 
+4. Must use conductor packaging or anti-static materials packaging or transportation. 
+ 
+ 
+ 
+ 
+ 
+ +86-571-89966911     
+   
+Rm701, No.9 Building, No. 1 WeiYe Road, Puyan Street, Binjiang District, Hangzhou, Zhejiang  
+     
+http:// www.relmon.com 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
